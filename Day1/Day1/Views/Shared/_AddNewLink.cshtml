@@ -1,0 +1,9 @@
+﻿
+@Html.ActionLink("Add New Employee", "AddNew", "Employee", null, new { @class="btn btn-info" })
+
+@*@Html.ActionLink("Import Employees from CSV", "Index", "BulkUpload", null, new { @class = "btn btn-info" })*@
+
+@* Using custom route *@
+
+<a href="/Employee/Upload" class="btn btn-info">Import Employees from CSV</a>
+

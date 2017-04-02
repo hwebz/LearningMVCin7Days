@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\BusinessEntities.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\BusinessEntities.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessLayer\obj\Debug\BusinessLayer.pdb

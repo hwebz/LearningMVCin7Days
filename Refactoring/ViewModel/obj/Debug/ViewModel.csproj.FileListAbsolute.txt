@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\ViewModel\obj\Debug\ViewModel.pdb

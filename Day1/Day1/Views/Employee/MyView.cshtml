@@ -1,0 +1,51 @@
+﻿@*@using Day1.Models
+@{
+
+    ViewBag.Title = "MyView";
+
+    //var e = (Employee) ViewData["Employee"];
+    var e = (Employee) ViewBag.Employee;
+}
+
+<h2>MyView</h2>
+
+<div class="panel">
+    <h4>Employee Name: @e.FirstName @e.LastName</h4>
+    <h4>Employee Salary: @e.Salary.ToString("C")</h4>
+</div>*@
+
+@*@using Day1.Models
+@model Employee
+    
+<div>
+    <h4>Employee Name: @Model.FirstName @Model.LastName</h4>
+    
+    @if (Model.Salary > 1000)
+    {
+        <span style="background-color: yellow">Employee Salary: @Model.Salary.ToString("C")</span>
+    }
+    else
+    {
+        <span style="background-color: green">Employee Salary: @Model.Salary.ToString("C")</span>
+    }
+</div>*@
+
+@using Day1.ViewModel
+@model EmployeeViewModel
+    
+@{
+    Layout = "~/Views/Shared/_LayoutWithModel.cshtml";
+}
+
+@section Title {
+    Employee Detail
+}
+    
+@section ContentBody {
+    <div>
+        <h3>Hello, @Model.UserName</h3>
+        <h4>Employee Name: @Model.EmployeeName</h4>
+
+        <span style="background-color: @Model.SalaryColor">Employee Salary: @Model.Salary</span>
+    </div>
+}

@@ -1,0 +1,40 @@
+﻿@using Day1.ViewModel
+@model CreateEmployeeViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutWithModel.cshtml";
+    ViewBag.Title = "Create Employee";
+}
+
+@section Title {
+    Create new Employee
+}
+
+@section HeaderSection {
+    <script src="~/Scripts/Validations.js"></script>
+}
+
+@section ContentBody {
+    <h3>Create Employee</h3>
+
+    <form action="/Employee/SaveEmployee" method="post">
+        <div class="form-group">
+            <label for="txtFirstName">First Name</label>
+            <input type="text" placeholder="Enter first name" name="FirstName" id="txtFirstName" class="form-control" value="@Model.FirstName" />
+            <p class="has-error">@Html.ValidationMessage("FirstName")</p>
+        </div>
+        <div class="form-group">
+            <label for="txtLastName">Last Name</label>
+            <input type="text" placeholder="Enter last name" name="LastName" id="txtLastName" class="form-control" value="@Model.LastName" />
+            <p class="has-error">@Html.ValidationMessage("LastName")</p>
+        </div>
+        <div class="form-group">
+            <label for="txtSalary">Salary</label>
+            <input type="text" placeholder="Enter salary" name="Salary" id="txtSalary" class="form-control" value="@Model.Salary" />
+            <p class="has-error">@Html.ValidationMessage("Salary")</p>
+        </div>
+        @Html.AntiForgeryToken()
+        <input type="submit" name="BtnSubmit" value="Create" class="btn btn-primary" onclick="return isValid();" />
+        <input type="reset" name="BtnReset" value="Reset" class="btn btn-default" />
+        <input type="submit" name="BtnSubmit" value="Cancel" class="btn btn-danger" />
+    </form>
+}

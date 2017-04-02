@@ -1,0 +1,33 @@
+﻿@using Day1.ViewModel
+@model EmployeeListViewModel
+
+<div>
+    @*<h3>Hello, @Model.UserName</h3>*@
+    @*@Html.ActionLink("Add New Employee", "AddNew", "Employee", null, new { @class="btn btn-info" })*@
+    <div class="row form-group">
+        <div class="col-md-12">
+            <h2>Employee List</h2>
+            @{
+                Html.RenderAction("GetAddNewLink");
+            }
+        </div>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>Employee Name</th>
+            <th>Salary</th>
+        </tr>
+        @foreach (var item in Model.Employees)
+        {
+            <tr>
+                <td>@item.EmployeeName</td>
+                <td style="background-color: @item.SalaryColor">@item.Salary</td>
+            </tr>
+        }
+    </table>
+</div>
+
+@*<hr />
+@{
+    Html.RenderPartial("_Footer", @Model.FooterData);
+}*@

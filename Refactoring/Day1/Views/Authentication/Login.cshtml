@@ -1,0 +1,25 @@
+﻿@using BusinessEntities
+@model UserDetails
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<h2>Login</h2>
+<p>@Html.ValidationMessage("CredentialError")</p>
+@using (Html.BeginForm("DoLogin", "Authentication", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.UserName)
+        @Html.TextBoxFor(x => x.UserName, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.UserName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Password)
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    </div>
+
+    <input type="submit" name="BtnSubmit" value="Login" class="btn btn-primary" />
+}
+

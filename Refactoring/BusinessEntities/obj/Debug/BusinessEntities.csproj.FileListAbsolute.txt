@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessEntities\obj\Debug\BusinessEntities.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessEntities\bin\Debug\BusinessEntities.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessEntities\bin\Debug\BusinessEntities.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessEntities\obj\Debug\BusinessEntities.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\LearningMVCin7Days\Refactoring\BusinessEntities\obj\Debug\BusinessEntities.pdb
