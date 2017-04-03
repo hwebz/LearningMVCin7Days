@@ -1,4 +1,4 @@
-﻿@model ViewModel.BaseViewModel
+﻿@model ViewModel.SPA.MainViewModel
 
 <!DOCTYPE html>
 <html>
@@ -8,25 +8,16 @@
     <title>@RenderSection("Title")</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @RenderSection("HeaderSection", false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Single Page Application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Employee", "Index", "Employee")</li>*@
-                    <li><a href="/Employee/Single">Employee</a></li>
-                    <li>@Html.ActionLink("Employees", "GetEmployees", "Employee")</li>
-                    <li>@Html.ActionLink("SPA", "Index", new { area = "SPA", controller = "Main" }, null)</li>
+                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a>Hello, @Model.UserName</a></li>
@@ -42,6 +33,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

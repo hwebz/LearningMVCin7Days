@@ -1,0 +1,47 @@
+﻿@*@model ViewModel.SPA.MainViewModel*@
+
+@{
+    Layout = "~/Views/Shared/_SPA_Layout.cshtml";
+}
+
+@section Title {
+    Single Page Application with jQuery & AJAX
+}
+
+@section ContentBody {
+    @Html.Action("EmployeeList", "Main")
+}
+
+@section scripts {
+    <script>
+        function OpenAddNew() {
+            $.get("/SPA/Main/AddNew").then(function(respond) {
+                $("<div id='create-employee'></div>").html(respond)
+                    .dialog({
+                        width: 'auto',
+                        height: 'auto',
+                        modal: true,
+                        title: 'Create New Employee',
+                        close: function() {
+                            $("#create-employee").remove();
+                        }
+                    });
+            });
+        }
+
+        function OpenBulkUpload() {
+            $.get("/SPA/SpaBulkUpload/Index").then(function(respond) {
+                $("<div id='bulk-upload'></div>").html(respond)
+                    .dialog({
+                        width: 'auto',
+                        height: 'auto',
+                        modal: true,
+                        title: 'Import Employee from CSV File',
+                        close: function() {
+                            $("#bulk-upload").remove();
+                        }
+                    });
+            });
+        }
+    </script>
+}

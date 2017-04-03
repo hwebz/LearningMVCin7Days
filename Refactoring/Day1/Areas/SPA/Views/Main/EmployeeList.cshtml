@@ -1,0 +1,25 @@
+﻿@model ViewModel.SPA.EmployeeListViewModel
+
+<div>
+    <div class="row form-group">
+        <div class="col-md-12">
+            <h2>Employee List</h2>
+            @{
+                Html.RenderAction("GetAddNewLink");
+            }
+        </div>
+    </div>
+    <table id="employee-table" class="table table-striped">
+        <tr>
+            <th>Employee Name</th>
+            <th>Salary</th>
+        </tr>
+        @foreach (var item in Model.Employees)
+        {
+            <tr>
+                <td>@item.EmployeeName</td>
+                <td style="background-color: @item.SalaryColor">@item.Salary</td>
+            </tr>
+        }
+    </table>
+</div>

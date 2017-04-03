@@ -1,0 +1,67 @@
+﻿@model ViewModel.SPA.CreateEmployeeViewModel
+
+<form action="/SPA/Main/SaveEmployee" method="post">
+    <div class="form-group">
+        <label for="txtFirstName">First Name</label>
+        <input type="text" placeholder="Enter first name" name="FirstName" id="txtFirstName" class="form-control" value="@Model.FirstName" />
+        <p class="has-error">@Html.ValidationMessage("FirstName")</p>
+    </div>
+    <div class="form-group">
+        <label for="txtLastName">Last Name</label>
+        <input type="text" placeholder="Enter last name" name="LastName" id="txtLastName" class="form-control" value="@Model.LastName" />
+        <p class="has-error">@Html.ValidationMessage("LastName")</p>
+    </div>
+    <div class="form-group">
+        <label for="txtSalary">Salary</label>
+        <input type="text" placeholder="Enter salary" name="Salary" id="txtSalary" class="form-control" value="@Model.Salary" />
+        <p class="has-error">@Html.ValidationMessage("Salary")</p>
+    </div>
+    @Html.AntiForgeryToken()
+    <input type="submit" name="BtnSubmit" value="Create" class="btn btn-primary" onclick="return SaveEmployee()" />
+    <input type="reset" name="BtnReset" value="Reset" class="btn btn-default" onclick="ResetForm()" />
+    <input type="submit" name="BtnSubmit" value="Cancel" class="btn btn-danger" onclick="CancelSave()" />
+</form>
+
+<script src="~/Scripts/Validations.js"></script>
+
+<script>
+    function ResetForm() {
+        document.getElementById("txtFirstName").value = '';
+        document.getElementById("txtLastName").value = '';
+        document.getElementById("txtSalary").value = '';
+    }
+
+    function CancelSave() {
+        var createEmployeeElement = $("#create-employee");
+        if (createEmployeeElement) createEmployeeElement.dialog("close");
+    }
+    function SaveEmployee() {
+        if (isValid()) {
+            var token = '@Html.AntiForgeryToken()';
+            token = $(token).val();
+            var emp = {
+                FirstName: $("#txtFirstName").val(),
+                LastName: $("#txtLastName").val(),
+                Salary: $("#txtSalary").val(),
+                __RequestVerificationToken: token
+            }
+
+            $.post("/SPA/Main/SaveEmployee", emp).then(function(respond) {
+                var newTr = $("<tr></tr>");
+                var nameTd = $("<td></td>");
+                var salaryTd = $("<td></td>");
+
+                nameTd.text(respond.EmployeeName);
+                salaryTd.text(respond.Salary);
+                salaryTd.css({ backgroundColor: respond.SalaryColor });
+
+                newTr.append(nameTd);
+                newTr.append(salaryTd);
+
+                $("#employee-table").append(newTr);
+                $("#create-employee").dialog('close');
+            });
+        }
+        return false;
+    }
+</script>
